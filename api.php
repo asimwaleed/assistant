@@ -2,6 +2,8 @@
 <?php
 
 
+
+header('Content-Type: application/json');
 function processMessage($update){
 	if ($update["result"]["action"] == "") {
 
