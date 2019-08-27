@@ -19,7 +19,7 @@ function processMessage($update){
 }
 function sendMessage($parameters){
 	$req_dump = print_r($parameters, true);
-	$fp = file_put_contents('reques4.log', $req_dump);
+	$fp = file_put_contents('request.log', $req_dump);
 	header('Content-Type; application/json');
 	echo json_encode($parameters);
 }
