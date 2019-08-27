@@ -5,7 +5,7 @@
 
 header('Content-Type: application/json');
 function processMessage($update){
-
+	if ($update["result"]["action"] == "") {
 
 		$fp = file_put_contents('request.log', $update["result"]["parameters"]["msg"]);
 		sendMessage(array(
@@ -15,7 +15,7 @@ function processMessage($update){
 "contextOut" => array()
 		));
 		# code...
-
+	}
 }
 function sendMessage($parameters){
 	$req_dump = print_r($parameters, true);
